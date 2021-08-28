@@ -1,10 +1,30 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_workshop/constants/api.dart';
 import 'package:flutter_workshop/global.dart';
 import 'package:flutter_workshop/models/inquiry_model.dart';
+import 'package:flutter_workshop/models/weather_model.dart';
+import 'package:get/get_connect.dart';
 
 final databaseReference = FirebaseFirestore.instance;
 
-class Database {
+class Database extends GetConnect {
+  Future<dynamic> getWeather(String cityName) async {
+    try {
+      var response = await get(
+          'https://api.weatherapi.com/v1/current.json?key=${Api.weatherApiKey}&q=$cityName&aqi=no');
+      if (response.statusCode == 200) {
+        WeatherModel weather = WeatherModel.fromMap(response.body['current']);
+        return weather;
+      } else if (response.statusCode == 400) {
+        showSnackbar('City Not Found', Status.FAILED);
+      }
+    } catch (e) {
+      print(e);
+      showSnackbar('Error Fetching Weather', Status.FAILED);
+      return false;
+    }
+  }
+
   Future<void>? createInquiry(InquiryModel contact) async {
     try {
       await databaseReference
