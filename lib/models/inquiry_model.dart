@@ -5,9 +5,9 @@
 import 'dart:convert';
 
 InquiryModel contactModelFromMap(String str) =>
-    InquiryModel.fromMap(json.decode(str));
+    InquiryModel.fromJson(json.decode(str));
 
-String contactModelToMap(InquiryModel data) => json.encode(data.toMap());
+String contactModelToMap(InquiryModel data) => json.encode(data.toJson());
 
 class InquiryModel {
   InquiryModel({
@@ -26,7 +26,7 @@ class InquiryModel {
   String? message;
   dynamic createdAt;
 
-  factory InquiryModel.fromMap(Map<String, dynamic> json) => InquiryModel(
+  factory InquiryModel.fromJson(Map<String, dynamic> json) => InquiryModel(
         id: json["id"] == null ? null : json["id"],
         name: json["name"] == null ? null : json["name"],
         email: json["email"] == null ? null : json["email"],
@@ -35,7 +35,7 @@ class InquiryModel {
         createdAt: json["createdAt"] == null ? null : json["createdAt"],
       );
 
-  Map<String, dynamic> toMap() => {
+  Map<String, dynamic> toJson() => {
         "id": id == null ? null : id,
         "name": name == null ? null : name,
         "email": email == null ? null : email,

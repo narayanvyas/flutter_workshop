@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>796086792293-8pu4rkkfmt9vksd6eadaufn6ucond0jt.apps.googleusercontent.com</string>
+	<string>882952076690-tocih80fciv9k5ibipdcg3krf944uj6c.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.796086792293-8pu4rkkfmt9vksd6eadaufn6ucond0jt</string>
+	<string>com.googleusercontent.apps.882952076690-tocih80fciv9k5ibipdcg3krf944uj6c</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDm70n3fOKJg8AqNcSgfACy7q--hYa17ww</string>
+	<string>AIzaSyCYVgjF5VEWfCtuauHi1VKBLGC1PCfBvVo</string>
 	<key>GCM_SENDER_ID</key>
-	<string>796086792293</string>
+	<string>882952076690</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.flexxited.flutterWorkshop</string>
 	<key>PROJECT_ID</key>
-	<string>ssn-workshop</string>
+	<string>flutter-workshop-new</string>
 	<key>STORAGE_BUCKET</key>
-	<string>ssn-workshop.appspot.com</string>
+	<string>flutter-workshop-new.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:796086792293:ios:e048cc6d453f4f61f5168c</string>
+	<string>1:882952076690:ios:880b12023f1cb4553bd54b</string>
 </dict>
 </plist>

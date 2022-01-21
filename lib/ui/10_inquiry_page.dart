@@ -141,7 +141,7 @@ class _InquiryPageState extends State<InquiryPage> {
                     child: TextButton(
                       onPressed: () async {
                         if (validateForm()) {
-                          InquiryModel inquiry = InquiryModel.fromMap({
+                          InquiryModel inquiry = InquiryModel.fromJson({
                             'id': getTimeStamp(),
                             'name': nameController.text,
                             'email': emailController.text,

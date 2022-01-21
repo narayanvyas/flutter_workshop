@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "08d20c3c38ee9b8931fa8b74e1c80e73af6b9b7dbbe31658666a3bb0328c2d90"
+build_start_time: [1642746084, 832839012]
+build_end_time: [1642746084, 913491010]
+inputs:
+  "/Users/narayanvyas/StudioProjects/flutter_workshop/ios/Runner/AppDelegate.swift": !private [1628958271, 281126499]

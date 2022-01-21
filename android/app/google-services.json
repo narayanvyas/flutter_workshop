@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "796086792293",
-    "project_id": "ssn-workshop",
-    "storage_bucket": "ssn-workshop.appspot.com"
+    "project_number": "882952076690",
+    "project_id": "flutter-workshop-new",
+    "storage_bucket": "flutter-workshop-new.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:796086792293:android:a86222630861f960f5168c",
+        "mobilesdk_app_id": "1:882952076690:android:10f9ba728bc8a58a3bd54b",
         "android_client_info": {
           "package_name": "com.flexxited.flutter_workshop"
         }
       },
       "oauth_client": [
         {
-          "client_id": "796086792293-v3fm75to1t2n8v19knt6npk3o9u6vnh6.apps.googleusercontent.com",
+          "client_id": "882952076690-hr3vmpaf46dum2nrrof71j7f0p0kb89u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAP_juKDgP5jj-g2URsIvqHYLbGQWvs6ok"
+          "current_key": "AIzaSyBY9-GDc26xfqbItJVsYqd43HiMh5n5y5w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "796086792293-v3fm75to1t2n8v19knt6npk3o9u6vnh6.apps.googleusercontent.com",
+              "client_id": "882952076690-hr3vmpaf46dum2nrrof71j7f0p0kb89u.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "882952076690-tocih80fciv9k5ibipdcg3krf944uj6c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flexxited.flutterWorkshop"
+              }
             }
           ]
         }

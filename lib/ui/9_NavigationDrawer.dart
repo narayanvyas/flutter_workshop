@@ -3,6 +3,7 @@ import 'package:flutter_workshop/ui/10_inquiry_page.dart';
 import 'package:flutter_workshop/ui/11_all_inquiries_page.dart';
 import 'package:flutter_workshop/ui/12_pick_image.dart';
 import 'package:flutter_workshop/ui/13_weather.dart';
+import 'package:flutter_workshop/ui/14_all_inquiries_with_get.dart';
 import 'package:flutter_workshop/ui/1_HelloWorld.dart';
 import 'package:flutter_workshop/ui/2_RowWidget.dart';
 import 'package:flutter_workshop/ui/3_ColumnWidget.dart';
@@ -98,6 +99,12 @@ class NavigationDrawer extends StatelessWidget {
             title: Text('All Inquiries'),
             onTap: () {
               Get.to(() => AllInquiries());
+            },
+          ),
+          ListTile(
+            title: Text('All Inquiries With Get'),
+            onTap: () {
+              Get.to(() => AllInquiriesWithGet());
             },
           ),
           ListTile(

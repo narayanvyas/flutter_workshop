@@ -30,7 +30,7 @@ class Database extends GetConnect {
       await databaseReference
           .collection('INQUIRIES')
           .doc(contact.id)
-          .set(contact.toMap());
+          .set(contact.toJson());
       showSnackbar('Inquiry Sent Successfully', Status.SUCCESS);
     } catch (e) {
       print(e);
@@ -40,30 +40,41 @@ class Database extends GetConnect {
   Future<InquiryModel?> getInquiry(String id) async {
     try {
       var _doc = await databaseReference.collection("INQUIRIES").doc(id).get();
-      return InquiryModel.fromMap(_doc.data()!);
+      return InquiryModel.fromJson(_doc.data()!);
     } catch (e) {
       print(e);
     }
   }
 
+  // Optimized Version of Streams
   Stream<List<InquiryModel>> inquiriesStream() {
     return databaseReference
         .collection("INQUIRIES")
+        .orderBy('createdAt', descending: true)
         .snapshots()
-        .map((QuerySnapshot<Map<String, dynamic>> query) {
-      List<InquiryModel> retVal = <InquiryModel>[];
-      query.docs.forEach(
-          (element) => retVal.add(InquiryModel.fromMap(element.data())));
-      return retVal;
-    });
+        .map((query) =>
+            query.docs.map((e) => InquiryModel.fromJson(e.data())).toList());
   }
+
+  // Stream<List<InquiryModel>> inquiriesStream() {
+  //   return databaseReference
+  //       .collection("INQUIRIES")
+  //       .orderBy('createdAt', descending: true)
+  //       .snapshots()
+  //       .map((QuerySnapshot<Map<String, dynamic>> query) {
+  //     List<InquiryModel> retVal = <InquiryModel>[];
+  //     query.docs.forEach(
+  //         (element) => retVal.add(InquiryModel.fromJson(element.data())));
+  //     return retVal;
+  //   });
+  // }
 
   Future<Status> updateInquiry(InquiryModel inquiry) async {
     try {
       await databaseReference
           .collection("INQUIRIES")
           .doc(inquiry.id)
-          .update(inquiry.toMap());
+          .update(inquiry.toJson());
       return Status.SUCCESS;
     } catch (e) {
       print(e);
